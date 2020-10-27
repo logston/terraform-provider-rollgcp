@@ -29,14 +29,16 @@ No. Names must be unique.
 
 ### Test It Out
 
+If you want LOTS for debugging info, set this env var: `TF_LOG=TRACE`
+
 1. Get a service account key from GCP for the project you are going to use. Place that key at `~/.gcloud/gcp.json`.
 1. Clone repo
 1. Run `make install`
 1. `cd examples/node-group`
-1. Update the variables file to point at a GCP project of your choosing
-1. `terraform init && terraform apply  --auto-approve` (This will create the cluster and node pool to be rolled)
+1. Update the testing.tfvars file to point at a GCP project of your choosing
+1. `terraform init && terraform apply -var-file="testing.tfvars" --auto-approve` (This will create the cluster and node pool to be rolled)
 1. Change the `machine_type` from `"e2-small"` to `"e2-medium"`
-1. `terraform init && terraform apply --auto-approve` (This will roll the node pool up to the new size)
+1. `terraform init && terraform apply -var-file="testing.tfvars" --auto-approve` (This will roll the node pool up to the new size)
 1. Watch in GCP or watch in kubectl logs if you have a pod running
 
 ### What does it look like in use?
