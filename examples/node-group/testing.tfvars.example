@@ -1,0 +1,4 @@
+org_id = "1234567890"
+project_id = "my-gcp-proj-123"
+project_name = "my-gcp-proj-123"
+billing_account_id = "my-gcp-proj-123"
