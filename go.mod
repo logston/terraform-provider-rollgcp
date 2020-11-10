@@ -1,4 +1,4 @@
-module github.com/logston/terraform-provider-rolleksgcp
+module github.com/logston/terraform-provider-rollgcp
 
 go 1.14
 

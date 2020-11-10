@@ -1,4 +1,4 @@
-package rolleksgcp
+package rollgcp
 
 import (
 	"context"
@@ -150,7 +150,7 @@ func Provider() *schema.Provider {
 		DataSourcesMap: map[string]*schema.Resource{},
 
 		ResourcesMap: map[string]*schema.Resource{
-			"rolleksgcp_container_node_pool": resourceContainerNodePool(),
+			"rollgcp_container_node_pool": resourceContainerNodePool(),
 		},
 	}
 

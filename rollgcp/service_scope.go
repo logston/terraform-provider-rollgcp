@@ -1,4 +1,4 @@
-package rolleksgcp
+package rollgcp
 
 import "github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 

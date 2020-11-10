@@ -1,11 +1,11 @@
-# terraform-provider-rolleksgcp
+# terraform-provider-rollgcp
 
 This Terraform provider allows for a GKE node pool to be updated without any downtime.
 
 ### How it works
 
 The provider works by defining a new resource called a
-`rolleksgcp_container_node_pool`. This resource all of the same attributes and
+`rollgcp_container_node_pool`. This resource all of the same attributes and
 configuration features of a `google_container_node_pool` from the
 https://github.com/hashicorp/terraform-provider-google-beta/ provider.
 
@@ -51,7 +51,7 @@ resource "google_container_cluster" "primary" {
   project  = var.project_id
 }
 
-resource "rolleksgcp_container_node_pool" "primary_node_pool" {
+resource "rollgcp_container_node_pool" "primary_node_pool" {
   project    = var.project_id
   name       = var.node_pool_name
   location   = var.region

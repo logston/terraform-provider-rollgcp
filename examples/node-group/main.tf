@@ -1,8 +1,8 @@
 terraform {
   required_providers {
-    rolleksgcp = {
+    rollgcp = {
       versions = ["0.1"]
-      source = "hashicorp.com/edu/rolleksgcp"
+      source = "hashicorp.com/edu/rollgcp"
     }
   }
 }
@@ -12,7 +12,7 @@ provider "google" {
   credentials = file(var.credentials_file_path)
 }
 
-provider "rolleksgcp" {
+provider "rollgcp" {
   region      = var.region
   credentials = file(var.credentials_file_path)
 }
@@ -29,7 +29,7 @@ resource "google_container_cluster" "primary" {
   initial_node_count       = 1
 }
 
-resource "rolleksgcp_container_node_pool" "primary_node_pool" {
+resource "rollgcp_container_node_pool" "primary_node_pool" {
   project    = var.project_id
   name       = var.node_pool_name
   location   = var.region

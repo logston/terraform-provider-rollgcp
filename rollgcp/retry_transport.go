@@ -1,4 +1,4 @@
-package rolleksgcp
+package rollgcp
 
 // A http.RoundTripper that retries common errors, with convenience constructors.
 //
